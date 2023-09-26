@@ -4,53 +4,44 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <style>
-        a {
-            text-align: center;
-            text-decoration: none;
-            /* 링크의 밑줄 제거 */
-            color: inherit;
-            /* 링크의 색상 제거 */
+
+    <style>/* Stylesheet 1: */
+        body {
+            font: 100% Lucida Sans, Verdana;
+            margin: 20px;
+            line-height: 26px;
         }
-
-        .menu_style {
-            width: 150px;
-            height: auto;
-            background-color: gray;
-            color: white;
-            font-size: 120%;
-            list-style-type: none;
-            cursor: pointer
+        
+        .container {
+            xmin-width: 900px;
         }
-
-
-        .this_menu_style {
-            width: 150px;
-            height: auto;
-            background-color: rgb(123, 225, 126);
-            color: white;
-            font-size: 120%;
-            list-style-type: none;
-            cursor: pointer
-        }
-
+        
         .wrapper {
             position: relative;
             overflow: auto;
         }
-
+        
+        #top, #sidebar, #bottom, .menuitem {
+            border-radius: 4px;
+            margin: 4px;
+        }
+        
+        #top {
+            background-color: #04AA6D;
+            color: #ffffff;
+            padding: 15px;
+        }
+        
         #menubar {
-            width: 150px;
-
+            width: 200px;
+            float: left
         }
-
-        #top h1,
-        #top p,
-        #menulist {
-            margin: 0;
-            padding: 0;
+        
+        #main {
+            padding: 10px;
+            margin: 0 210px;
         }
-
+        
         #sidebar {
             background-color: #32a4e7;
             color: #ffffff;
@@ -61,12 +52,7 @@
             right: 0;
             position: absolute;
         }
-
-        #main {
-            padding: 10px;
-            margin: 0 210px;
-        }
-
+        
         #bottom {
             border: 1px solid #d4d4d4;
             background-color: #f1f1f1;
@@ -75,73 +61,99 @@
             font-size: 70%;
             line-height: 14px;
         }
-    </style>
-
+        
+        #top h1, #top p, #menulist {
+            margin: 0;
+            padding: 0;
+        }
+        
+        .menuitem {
+            background-color: #f1f1f1;
+            border: 1px solid #d4d4d4;
+            list-style-type: none;
+            padding: 2px;
+            cursor: pointer;
+        }
+        
+        .menuitem:hover {
+            background-color: #ffffff;
+        }
+        
+        .menuitem:first-child {
+           background-color:#04AA6D;
+           color: white;
+           font-weight:bold;
+        }
+        
+        a {
+            color: #000000;
+            text-decoration: underline;
+        }
+        
+        a:hover {
+            text-decoration: none;
+        }
+        
+        
+        @media (max-width: 800px) {
+            #sidebar {
+                width: auto;
+                position: relative;
+            } 
+            #main {
+                margin-right: 0;
+            }    
+               
+        }
+        
+        @media (max-width: 600px) {
+            #menubar {
+                width: auto;
+                float: none;
+            }
+            #main {
+                margin: 0;
+            }    
+        }
+        </style>
 </head>
-
 <body>
-    <div>
-        <div>
-            <div style="background-color: green;">
-                <h1 style="color: white;">Welcome to Taekjun's Homepage</h1>
-                <p style="color: white;">Use the menu to select different Stylesheets</p>
-            </div>
-            <div class="wrapper">
-                <div id="menubar">
-                    <ul id="menulist">
-                        <div class="this_menu_style">
-                            <p><a href="https://glittering-tapioca-c5acb8.netlify.app/style1">Stylesheet 1</a>
-                            </p>
-                        </div>
-                        <div class="menu_style">
-                            <p><a href="https://glittering-tapioca-c5acb8.netlify.app/style2">Stylesheet 2</a>
-                            </p>
-                        </div>
-                        <div class="menu_style">
-                            <p>Stylesheet 3</p>
-                        </div>
-                        <div class="menu_style">
-                            <p>Stylesheet 4</p>
-                        </div>
-                        <div class="menu_style">
-                            <p><a href="https://glittering-tapioca-c5acb8.netlify.app/nostyle">No Stylesheet</a>
-                            </p>
-                        </div>
-                    </ul>
-                </div>
-
-                <div id="main">
-                    <h1>Same Page Different Stylesheets</h1>
-                    <p>This is a demonstration of how different stylesheets can change the layout of your HTML page.
-                        You
-                        can change the layout of this page by selecting different stylesheets in the menu, or by
-                        selecting one of the following links:
-                        Stylesheet1, Stylesheet2, Stylesheet3, Stylesheet4.</p>
-                    <h2>No Styles</h2>
-                    <p>This page uses DIV elements to group different sections of the HTML page. Click here to see
-                        how
-                        the page looks like with no stylesheet:
-                        No Stylesheet.</p>
-                </div>
-
-
-                <div id="sidebar">
-                    <h1>Side-Bar</h1>
-                    <p>Side-Bar
-                        Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod
-                        tincidunt ut laoreet dolore magna aliquam erat volutpat.</p>
-                </div>
-            </div>
-            <div id="bottom">
-                <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut
-                    laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation
-                    ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure
-                    dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla
-                    facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril
-                    delenit augue duis dolore te feugait nulla facilisi.</p>
-            </div>
+    <div class="container wrapper">
+        <div id="top">
+          <h1>Welcome to My Homepage</h1>
+          <p>Use the menu to select different Stylesheets</p>
         </div>
-    </div>
+        <div class="wrapper">
+         <div id="menubar">
+           <ul id="menulist">
+             <li class="menuitem" onclick="reStyle(0)">Stylesheet 1
+             <li class="menuitem" onclick="reStyle(1)">Stylesheet 2
+             <li class="menuitem" onclick="reStyle(2)">Stylesheet 3
+             <li class="menuitem" onclick="reStyle(3)">Stylesheet 4
+             <li class="menuitem" onclick="noStyles()">No Stylesheet
+           </ul>
+          </div>
+          <div id="main">
+            <h1>Same Page Different Stylesheets</h1>
+            <p>This is a demonstration of how different stylesheets can change the layout of your HTML page. You can change the layout of this page by selecting different stylesheets in the menu, or by selecting one of the following links:<br>
+            <a href="#" onclick="reStyle(0);return false">Stylesheet1</a>,
+            <a href="#" onclick="reStyle(1);return false">Stylesheet2</a>,
+            <a href="#" onclick="reStyle(2);return false">Stylesheet3</a>,
+            <a href="#" onclick="reStyle(3);return false">Stylesheet4</a>.
+            </p>
+             <h2>No Styles</h2>
+            <p>This page uses DIV elements to group different sections of the HTML page. Click here to see how the page looks like with no stylesheet:<br><a href="#" onclick="noStyles();return false">No Stylesheet</a>.</p>
+         </div>
+          <div id="sidebar">
+            <h3>Side-Bar</h3>
+            <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</p>
+          </div>
+        </div>  
+        
+        
+        <div id="bottom">
+          Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi.
+        </div>
+      </div>
 </body>
-
 </html>

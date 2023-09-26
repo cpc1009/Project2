@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+</head>
+<body>
+    <form>
+        <label for="name">이름:</label>
+        <input type="text" id="name" name="name" required><br><br>
+        
+        <label>성별:</label>
+        <input type="radio" id="male" name="gender" value="male">
+        <label for="male">남성</label>
+        <input type="radio" id="female" name="gender" value="female">
+        <label for="female">여성</label><br><br>
+        
+        <label for="email">이메일:</label>
+        <input type="email" id="email" name="email" required><br><br>
+        
+        <label for="subscribe">성인?:</label>
+        <input type="checkbox" id="subscribe" name="subscribe" value="yes"><br><br>
+        
+        <label for="country">국가:</label>
+        <select id="country" name="country">
+            <option value="usa">미국</option>
+            <option value="canada">캐나다</option>
+            <option value="uk">대한민국</option>
+        </select><br><br>
+        
+        <label for="birthdate">생년월일:</label>
+        <input type="date" id="birthdate" name="birthdate"><br><br>
+        
+        <label for="comments">의견:</label><br>
+        <textarea id="comments" name="comments" rows="4" cols="50"></textarea><br><br>
+        
+        <input type="submit" value="제출">
+    </form>
+</body>
+</html>

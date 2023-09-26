@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -15,28 +14,66 @@
         }
 
         .menu_style {
-            width: 200px;
+            width: 150px;
             height: auto;
             background-color: gray;
             color: white;
             font-size: 120%;
+            list-style-type: none;
+            cursor: pointer
         }
 
+
         .this_menu_style {
-            width: 200px;
+            width: 150px;
             height: auto;
             background-color: rgb(123, 225, 126);
             color: white;
             font-size: 120%;
+            list-style-type: none;
+            cursor: pointer
         }
 
-        article {
-            float: left;
-            padding: 20px;
-            width: 70%;
+        .wrapper {
+            position: relative;
+            overflow: auto;
+        }
+
+        #menubar {
+            width: 150px;
+
+        }
+
+        #top h1,
+        #top p,
+        #menulist {
+            margin: 0;
+            padding: 0;
+        }
+
+        #sidebar {
+            background-color: #32a4e7;
+            color: #ffffff;
+            padding: 10px;
+            width: 180px;
+            bottom: 0;
+            top: 0;
+            right: 0;
+            position: absolute;
+        }
+
+        #main {
+            padding: 10px;
+            margin: 0 210px;
+        }
+
+        #bottom {
+            border: 1px solid #d4d4d4;
             background-color: #f1f1f1;
-            height: 300px;
-            /* only for demonstration, should be removed */
+            text-align: center;
+            padding: 10px;
+            font-size: 70%;
+            line-height: 14px;
         }
     </style>
 
@@ -47,49 +84,55 @@
         <div>
             <div style="background-color: green;">
                 <h1 style="color: white;">Welcome to Taekjun's Homepage</h1>
-                <p>Use the menu to select different Stylesheets</p>
+                <p style="color: white;">Use the menu to select different Stylesheets</p>
             </div>
-            <div>
-                <div>
-                    <div class="this_menu_style">
-                        <p><a href="https://glittering-tapioca-c5acb8.netlify.app/style1">Stylesheet 1</a></p>
-                    </div>
-                    <div class="menu_style">
-                        <p><a href="https://glittering-tapioca-c5acb8.netlify.app/style2">Stylesheet 2</a></p>
-                    </div>
-                    <div class="menu_style">
-                        <p>Stylesheet 3</p>
-                    </div>
-                    <div class="menu_style">
-                        <p>Stylesheet 4</p>
-                    </div>
-                    <div class="menu_style">
-                        <p><a href="https://glittering-tapioca-c5acb8.netlify.app/nostyle">No Stylesheet</a></p>
-                    </div>
+            <div class="wrapper">
+                <div id="menubar">
+                    <ul id="menulist">
+                        <div class="this_menu_style">
+                            <p><a href="https://glittering-tapioca-c5acb8.netlify.app/style1">Stylesheet 1</a>
+                            </p>
+                        </div>
+                        <div class="menu_style">
+                            <p><a href="https://glittering-tapioca-c5acb8.netlify.app/style2">Stylesheet 2</a>
+                            </p>
+                        </div>
+                        <div class="menu_style">
+                            <p>Stylesheet 3</p>
+                        </div>
+                        <div class="menu_style">
+                            <p>Stylesheet 4</p>
+                        </div>
+                        <div class="menu_style">
+                            <p><a href="https://glittering-tapioca-c5acb8.netlify.app/nostyle">No Stylesheet</a>
+                            </p>
+                        </div>
+                    </ul>
                 </div>
-                <article>
-                    <div>
-                        <h1>Same Page Different Stylesheets</h1>
-                        <p>This is a demonstration of how different stylesheets can change the layout of your HTML page.
-                            You
-                            can change the layout of this page by selecting different stylesheets in the menu, or by
-                            selecting one of the following links:
-                            Stylesheet1, Stylesheet2, Stylesheet3, Stylesheet4.</p>
-                        <h2>No Styles</h2>
-                        <p>This page uses DIV elements to group different sections of the HTML page. Click here to see
-                            how
-                            the page looks like with no stylesheet:
-                            No Stylesheet.</p>
-                    </div>
-                </article>
-                <div>
+
+                <div id="main">
+                    <h1>Same Page Different Stylesheets</h1>
+                    <p>This is a demonstration of how different stylesheets can change the layout of your HTML page.
+                        You
+                        can change the layout of this page by selecting different stylesheets in the menu, or by
+                        selecting one of the following links:
+                        Stylesheet1, Stylesheet2, Stylesheet3, Stylesheet4.</p>
+                    <h2>No Styles</h2>
+                    <p>This page uses DIV elements to group different sections of the HTML page. Click here to see
+                        how
+                        the page looks like with no stylesheet:
+                        No Stylesheet.</p>
+                </div>
+
+
+                <div id="sidebar">
                     <h1>Side-Bar</h1>
                     <p>Side-Bar
                         Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod
                         tincidunt ut laoreet dolore magna aliquam erat volutpat.</p>
                 </div>
             </div>
-            <div>
+            <div id="bottom">
                 <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut
                     laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation
                     ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure

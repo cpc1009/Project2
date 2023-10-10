@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Edit Book</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <link rel="stylesheet" href="my.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <style>
+
+  </style>
+  <script>
+    $(document).ready(function() {
+      var bookData = {
+        title: "도서 제목",
+        author: "저자 이름",
+        publisher: "출판사"
+      };
+
+
+      $("#bookTitle").val(bookData.title);
+      $("#author").val(bookData.author);
+      $("#publisher").val(bookData.publisher);
+
+    
+      $("#editBookForm").submit(function(event) {
+        event.preventDefault();
+
+        var updatedTitle = $("#bookTitle").val();
+        var updatedAuthor = $("#author").val();
+        var updatedPublisher = $("#publisher").val();
+
+        if (updatedTitle === "" || updatedAuthor === "" || updatedPublisher === "") {
+          alert("도서명, 저자, 출판사는 필수 항목입니다.");
+          return;
+        }
+
+        var confirmUpdate = confirm("게시물을 수정할까요?");
+        if (confirmUpdate) {
+          alert("게시물이 수정되었습니다.");
+        }
+      });
+    });
+  </script>
+</head>
+<body>
+  <div class="container">
+    <h1>Edit Book</h1>
+    <form id="editBookForm">
+      <div class="form-group">
+        <label for="bookTitle">책 제목:</label>
+        <input type="text" class="form-control" id="bookTitle" name="bookTitle" required>
+      </div>
+      <div class="form-group">
+        <label for="author">저자:</label>
+        <input type="text" class="form-control" id="author" name="author" required>
+      </div>
+      <div class="form-group">
+        <label for="publisher">출판사:</label>
+        <input type="text" class="form-control" id="publisher" name="publisher" required>
+      </div>
+      <button type="submit" class="btn btn-primary">수정</button>
+    </form>
+  </div>
+</body>
+</html>

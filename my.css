@@ -1,0 +1,47 @@
+
+@media (max-width: 768px) {
+  body {
+    font-size: 14px;
+  }
+  .menu-icon {
+    display: block;
+  }
+}
+
+
+
+
+@media (min-width: 1025px) {
+  body {
+    font-size: 18px;
+  }
+}
+
+
+.container {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.item {
+  flex: 1;
+ 
+}
+
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+
+video {
+  max-width: 100%;
+  height: auto;
+}
+
+
+.menu-icon {
+  display: none; 
+
+}
